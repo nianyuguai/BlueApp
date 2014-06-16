@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btncolor"
+    android:orientation="vertical" >
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_shape"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_selector"
+            android:text="@string/search_btn"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    
+	
+	<LinearLayout
+        android:id="@+id/device_info_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_shape"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="8dip"
+                android:layout_weight="1"
+                android:text="@string/device_str"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/bt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="9dip"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="9dip"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+
+            <ProgressBar
+                android:id="@+id/search_pb"
+                style="?android:attr/progressBarStyleSmallInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:indeterminateDrawable="@drawable/pb_color"
+                android:text="@string/device_str"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#DDDEE1" />
+
+        <ListView
+            android:id="@+id/device_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_shape"
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>  
+    
+</LinearLayout>
